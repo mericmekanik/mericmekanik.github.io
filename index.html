@@ -3,309 +3,234 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meriç Mekanik | Kuşadası</title>
+
+<title>Kuşadası Mekanik Tesisat & Elektrik Pano Hizmetleri | Meriç Mekanik</title>
+<meta name="description" content="Kuşadası mekanik tesisat, su kaçağı tespiti, elektrik pano kurulumu ve tadilat hizmetleri. Davutlar ve Güzelçamlı dahil hızlı ve garantili çözümler.">
+<meta name="keywords" content="Kuşadası mekanik tesisat, Kuşadası elektrik pano, Kuşadası elektrikçi, Kuşadası su kaçağı, Kuşadası tadilat">
+<meta name="author" content="Meriç Mekanik">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-body{
-  font-family:'Poppins',sans-serif;
-  background:#f5f6f8;
-  color:#1c1c1c;
-}
-
-/* HEADER */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:#f5f6f8;color:#1c1c1c;}
 
 header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:16px 8%;
-  background:rgba(255,255,255,0.95);
-  backdrop-filter:blur(8px);
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  z-index:1000;
-  box-shadow:0 4px 20px rgba(0,0,0,0.05);
+display:flex;justify-content:space-between;align-items:center;
+padding:16px 8%;background:rgba(255,255,255,0.95);
+position:fixed;top:0;left:0;right:0;z-index:1000;
+box-shadow:0 4px 20px rgba(0,0,0,0.05);
 }
 
-.logo{
-  font-weight:700;
-  font-size:20px;
-  color:#0d1b2a;
-}
-
-nav a{
-  margin-left:25px;
-  text-decoration:none;
-  color:#333;
-  font-weight:500;
-  transition:.3s;
-}
-
-nav a:hover{
-  color:#f57c00;
-}
+.logo{font-weight:700;font-size:20px;color:#0d1b2a;}
+nav a{margin-left:25px;text-decoration:none;color:#333;font-weight:500;}
+nav a:hover{color:#f57c00;}
 
 .btn-orange{
-  background:linear-gradient(45deg,#f57c00,#ff9800);
-  color:white;
-  padding:10px 22px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:600;
-  transition:.3s;
+background:linear-gradient(45deg,#f57c00,#ff9800);
+color:white;padding:10px 22px;border-radius:8px;
+text-decoration:none;font-weight:600;
 }
-
-.btn-orange:hover{
-  transform:translateY(-2px);
-}
-
-/* HERO */
 
 .hero{
-  min-height:100vh;
-  background:
-  linear-gradient(rgba(13,27,42,0.75),rgba(13,27,42,0.75)),
-  url("hero.jpg") center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  padding:0 8%;
-  color:white;
-  margin-top:70px;
+min-height:100vh;
+background:
+linear-gradient(rgba(13,27,42,0.75),rgba(13,27,42,0.75)),
+url("hero.jpg") center/cover no-repeat;
+display:flex;align-items:center;padding:0 8%;
+color:white;margin-top:70px;
 }
 
-.hero-content{
-  max-width:650px;
+.hero-content{max-width:650px;}
+.hero h1{font-size:42px;margin-bottom:20px;}
+.hero p{font-size:18px;margin-bottom:20px;}
+
+.services, .portfolio{
+padding:100px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
-.hero h1{
-  font-size:48px;
-  line-height:1.2;
-  margin-bottom:20px;
-}
-
-.hero p{
-  font-size:18px;
-  margin-bottom:20px;
-  opacity:.9;
-}
-
-/* SERVICES */
-
-.services{
-  padding:100px 8%;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
+.section-title{
+text-align:center;
+font-size:32px;
+margin-bottom:50px;
+color:#0d1b2a;
 }
 
 .card{
-  background:white;
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:0 15px 35px rgba(0,0,0,0.05);
-  transition:.3s;
+background:white;border-radius:16px;
+overflow:hidden;
+box-shadow:0 15px 35px rgba(0,0,0,0.05);
+transition:.3s;
 }
 
 .card img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  transition:.4s;
+width:100%;height:220px;
+object-fit:cover;
 }
 
-.card:hover img{
-  transform:scale(1.05);
-}
-
-.card-content{
-  padding:25px;
-}
-
-.card:hover{
-  transform:translateY(-8px);
-}
-
-.card h3{
-  margin-bottom:12px;
-  color:#0d1b2a;
-}
-
-/* LOCATION */
+.card-content{padding:25px;}
+.card:hover{transform:translateY(-8px);}
+.card h3{margin-bottom:12px;color:#0d1b2a;}
 
 .location{
-  padding:100px 8%;
-  background:white;
-}
-
-.location-content{
-  max-width:900px;
-  margin:auto;
-  text-align:center;
-}
-
-.location h2{
-  font-size:32px;
-  margin-bottom:20px;
-  color:#0d1b2a;
-}
-
-.location p{
-  margin-bottom:40px;
-  line-height:1.7;
-  color:#555;
+padding:100px 8%;
+background:white;
+text-align:center;
 }
 
 .map{
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:0 15px 35px rgba(0,0,0,0.08);
+border-radius:16px;
+overflow:hidden;
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
+margin-top:30px;
 }
-
-/* FOOTER */
 
 footer{
-  background:#0d1b2a;
-  color:white;
-  text-align:center;
-  padding:30px 8%;
-  font-size:14px;
+background:#0d1b2a;
+color:white;text-align:center;
+padding:30px 8%;
+font-size:14px;
 }
 
-footer span{
-  color:#ff9800;
-  font-weight:600;
-}
-
-/* WHATSAPP */
+footer span{color:#ff9800;font-weight:600;}
 
 .whatsapp-btn{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  background:linear-gradient(45deg,#25D366,#1ebe5d);
-  color:white;
-  padding:14px 24px;
-  border-radius:40px;
-  text-decoration:none;
-  font-weight:600;
-  box-shadow:0 8px 25px rgba(37,211,102,0.4);
-  transition:.3s;
+position:fixed;right:20px;bottom:20px;
+background:linear-gradient(45deg,#25D366,#1ebe5d);
+color:white;padding:14px 24px;border-radius:40px;
+text-decoration:none;font-weight:600;
+box-shadow:0 8px 25px rgba(37,211,102,0.4);
 }
-
-.whatsapp-btn:hover{
-  transform:scale(1.05);
-}
-
-/* MOBILE */
 
 @media(max-width:768px){
-
-  nav{
-    display:none;
-  }
-
-  .hero{
-    padding:0 6%;
-  }
-
-  .hero h1{
-    font-size:30px;
-  }
-
-  .hero p{
-    font-size:15px;
-  }
-
+nav{display:none;}
+.hero h1{font-size:28px;}
 }
-
 </style>
-</head>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Kuşadası Meriç Mekanik",
+  "image": "https://mericmekanik.com/hero.jpg",
+  "telephone": "+905437699693",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kuşadası",
+    "addressRegion": "Aydın",
+    "addressCountry": "TR"
+  }
+}
+</script>
+
+</head>
 <body>
 
 <header>
-  <div class="logo">Kuşadası Meriç Mekanik</div>
-  <nav>
-    <a href="#">Ana Sayfa</a>
-    <a href="#hizmetler">Hizmetler</a>
-  </nav>
-  <a href="tel:05437699693" class="btn-orange">Hemen Ara</a>
+<div class="logo">Kuşadası Meriç Mekanik</div>
+<nav>
+<a href="#">Ana Sayfa</a>
+<a href="#hizmetler">Hizmetler</a>
+<a href="#projeler">Gerçek İşlerimiz</a>
+</nav>
+<a href="tel:05437699693" class="btn-orange">Hemen Ara</a>
 </header>
 
 <section class="hero">
-  <div class="hero-content">
-    <h1>Profesyonel Mekanik Tesisat Çözümleri</h1>
-    <p>Kuşadası ve çevresinde güvenilir, hızlı ve kaliteli hizmet.</p>
-    <a href="#hizmetler" class="btn-orange">Hizmetlerimiz</a>
-  </div>
+<div class="hero-content">
+<h1>Kuşadası Mekanik Tesisat & Elektrik Pano Hizmetleri</h1>
+<p>Davutlar ve Güzelçamlı dahil profesyonel, hızlı ve garantili çözümler.</p>
+<a href="#hizmetler" class="btn-orange">Hizmetlerimiz</a>
+</div>
 </section>
 
-<section class="services" id="hizmetler">
-  <div class="card">
-    <img src="Mekanik Tesisat.jpg" alt="Mekanik Tesisat">
-    <div class="card-content">
-      <h3>Mekanik Tesisat</h3>
-      <p>Profesyonel kurulum ve bakım hizmetleri.</p>
-    </div>
-  </div>
+<h2 class="section-title" id="hizmetler">Hizmetlerimiz</h2>
 
-  <div class="card">
-    <img src="Su Kaçağı Tespiti.jpg" alt="Su Kaçağı Tespiti">
-    <div class="card-content">
-      <h3>Su Kaçağı Tespiti</h3>
-      <p>Kırmadan dökmeden nokta atışı çözümler.</p>
-    </div>
-  </div>
+<section class="services">
 
-  <div class="card">
-    <img src="İnşaat&Tadilat.jpg" alt="İnşaat&Tadilat">
-    <div class="card-content">
-      <h3>İnşaat & Tadilat</h3>
-      <p>A’dan Z’ye anahtar teslim çözümler.</p>
-    </div>
-  </div>
+<div class="card">
+<img src="Mekanik Tesisat.jpg" alt="Kuşadası Mekanik Tesisat Hizmeti">
+<div class="card-content">
+<h3>Mekanik Tesisat</h3>
+<p>Profesyonel kurulum ve bakım hizmetleri.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="Su Kaçağı Tespiti.jpg" alt="Kuşadası Su Kaçağı Tespiti">
+<div class="card-content">
+<h3>Su Kaçağı Tespiti</h3>
+<p>Kırmadan dökmeden nokta atışı çözümler.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="İnşaat&Tadilat.jpg" alt="Kuşadası İnşaat ve Tadilat">
+<div class="card-content">
+<h3>İnşaat & Tadilat</h3>
+<p>A’dan Z’ye anahtar teslim çözümler.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="Elektrik-Pano.jpg" alt="Kuşadası Elektrik Pano Kurulumu">
+<div class="card-content">
+<h3>Elektrik Pano & Dağıtım</h3>
+<p>Ana dağıtım, kompanzasyon ve pano revizyon hizmetleri.</p>
+</div>
+</div>
+
+</section>
+
+<h2 class="section-title" id="projeler">Gerçek İşlerimiz</h2>
+
+<section class="portfolio">
+
+<div class="card">
+<img src="pano1.jpg" alt="Elektrik Pano Revizyonu Kuşadası">
+</div>
+
+<div class="card">
+<img src="pano2.jpg" alt="Kompanzasyon Panosu Kurulumu">
+</div>
+
+<div class="card">
+<img src="pompa.jpg" alt="Pompa Sistem Kurulumu Kuşadası">
+</div>
+
+<div class="card">
+<img src="termal.jpg" alt="Termal Kamera Kaçak Tespiti">
+</div>
+
 </section>
 
 <section class="location">
-  <div class="location-content">
-    <h2>Aydın Kuşadası Mekanik Tesisat Hizmeti</h2>
-    <p>
-      Kuşadası merkez, Davutlar ve Güzelçamlı bölgelerinde
-      mekanik tesisat, su kaçağı tespiti ve elektrik altyapı hizmetleri sunuyoruz.
-    </p>
+<h2>Kuşadası Mekanik & Elektrik Hizmet Bölgelerimiz</h2>
+<p>
+Kuşadası merkez, Davutlar, Güzelçamlı ve çevresinde
+mekanik tesisat, su kaçağı tespiti, elektrik pano kurulumu ve tadilat hizmetleri sunuyoruz.
+7/24 acil servis desteği sağlıyoruz.
+</p>
 
-    <div class="map">
-      <iframe
-        src="https://maps.google.com/maps?q=Kuşadası,%20Aydın&t=&z=13&ie=UTF8&iwloc=&output=embed"
-        width="100%"
-        height="350"
-        frameborder="0"
-        style="border:0;"
-        allowfullscreen
-        loading="lazy">
-      </iframe>
-    </div>
-  </div>
+<div class="map">
+<iframe
+src="https://maps.google.com/maps?q=Kuşadası,%20Aydın&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%" height="350" style="border:0;" allowfullscreen loading="lazy">
+</iframe>
+</div>
 </section>
 
 <footer>
-  © 2026 <span>Kuşadası Meriç Mekanik</span> | Aydın  
-  Tüm Hakları Saklıdır.
+©️ 2026 <span>Kuşadası Meriç Mekanik</span> | Aydın  
+Tüm Hakları Saklıdır.
 </footer>
 
 <a href="https://wa.me/905437699693" class="whatsapp-btn">
-  WhatsApp Destek
+WhatsApp Destek
 </a>
 
 </body>
