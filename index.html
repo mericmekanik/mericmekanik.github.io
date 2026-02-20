@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kuşadası Mekanik Tesisat, Elektrikçi & Pano Revizyonu | Meriç Mekanik</title>
+<title>Kuşadası Mekanik Tesisat & Elektrik Pano Hizmetleri | Meriç Mekanik</title>
 
-<meta name="description" content="Kuşadası mekanik tesisat, elektrikçi, pano revizyonu ve su kaçağı tespiti hizmetleri. Davutlar ve Güzelçamlı dahil hızlı müdahale ve garantili çözümler.">
-<meta name="keywords" content="Kuşadası mekanik tesisat, Kuşadası elektrikçi, Kuşadası elektrik pano, Kuşadası su kaçağı, Kuşadası tadilat">
+<meta name="description" content="Kuşadası mekanik tesisat, su kaçağı tespiti, elektrik pano kurulumu ve tadilat hizmetleri. Davutlar ve Güzelçamlı dahil hızlı ve garantili çözümler.">
+<meta name="keywords" content="Kuşadası mekanik tesisat, Kuşadası elektrik pano, Kuşadası elektrikçi, Kuşadası su kaçağı, Kuşadası tadilat">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -25,7 +25,6 @@ header{
 .logo{font-weight:700;font-size:20px;color:#0d1b2a;}
 nav a{margin-left:25px;text-decoration:none;color:#333;font-weight:500;}
 nav a:hover{color:#f57c00;}
-
 .btn-orange{
   background:linear-gradient(45deg,#f57c00,#ff9800);
   color:white;padding:10px 22px;border-radius:8px;
@@ -33,16 +32,25 @@ nav a:hover{color:#f57c00;}
 }
 
 .hero{
-  position:relative;
   min-height:100vh;
   background:
     linear-gradient(rgba(13,27,42,0.75),rgba(13,27,42,0.75)),
-    url("elektrik-pano.jpg") center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  padding:0 8%;
-  color:white;
-  margin-top:70px;
+    url("hero.jpg") center/cover no-repeat;
+  display:flex;align-items:center;padding:0 8%;
+  color:white;margin-top:70px;
+}
+  .hero{
+  position:relative;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url("elektrik-pano.jpg") center/cover no-repeat;
+  filter:blur(4px);
+  z-index:-1;
+}
 }
 
 .hero-content{max-width:650px;}
@@ -54,10 +62,6 @@ nav a:hover{color:#f57c00;}
   margin-bottom:40px;color:#0d1b2a;
 }
 
-section, h2{
-  scroll-margin-top:100px;
-}
-
 .services{
   padding:0 8% 60px 8%;
   display:grid;
@@ -66,39 +70,51 @@ section, h2{
 }
 
 .card{
-  background:white;
-  border-radius:16px;
+  background:white;border-radius:16px;
   overflow:hidden;
   box-shadow:0 15px 35px rgba(0,0,0,0.05);
   transition:.3s;
-  display:flex;
-  flex-direction:column;
 }
 
-.card img{
+.card img{width:100%;height:220px;object-fit:cover;}
+.card-content{padding:25px;}
+.card h3{margin-bottom:10px;color:#0d1b2a;}
+
+.location{
+  padding:80px 8%;background:white;
+  text-align:center;
+}
+
+.map{border-radius:16px;overflow:hidden;
+  box-shadow:0 15px 35px rgba(0,0,0,0.08);
+  margin-top:30px;
+}
+
+footer{
+  background:#0d1b2a;color:white;
+  text-align:center;padding:30px 8%;
+  font-size:14px;
+}
+
+footer span{color:#ff9800;font-weight:600;}
+
+.whatsapp-btn{
+  position:fixed;right:20px;bottom:20px;
+  background:linear-gradient(45deg,#25D366,#1ebe5d);
+  color:white;padding:14px 24px;border-radius:40px;
+  text-decoration:none;font-weight:600;
+}
+
+  .slider{
+  position:relative;
   width:100%;
-  height:220px;
-  object-fit:cover;
-}
-
-.card-content{
-  padding:25px;
-}
-
-.card h3{
-  margin-bottom:10px;
-  color:#0d1b2a;
-}
-
-.slider{
-  width:100%;
-  height:220px;
+  height:230px;
   overflow:hidden;
 }
 
 .slider img{
   width:100%;
-  height:220px;
+  height:230px;
   object-fit:cover;
   display:none;
 }
@@ -106,44 +122,22 @@ section, h2{
 .slider img.active{
   display:block;
 }
-
-.location{
-  padding:80px 8%;
-  background:white;
-  text-align:center;
-}
-
-.map{
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:0 15px 35px rgba(0,0,0,0.08);
-  margin-top:30px;
-}
-
-footer{
-  background:#0d1b2a;
-  color:white;
-  text-align:center;
-  padding:30px 8%;
-  font-size:14px;
-}
-
-footer span{color:#ff9800;font-weight:600;}
-
-.whatsapp-btn{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  background:linear-gradient(45deg,#25D366,#1ebe5d);
-  color:white;
-  padding:14px 24px;
-  border-radius:40px;
-  text-decoration:none;
-  font-weight:600;
-}
+  
 </style>
+
 </head>
 
+  <script>
+let slides = document.querySelectorAll(".slider img");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 2500);
+</script>
+  
 <body>
 
 <header>
@@ -194,17 +188,40 @@ footer span{color:#ff9800;font-weight:600;}
   </div>
 
   <div class="card">
-    <div class="slider">
-      <img src="images/elektrik-pano-kurulumu.jpg" class="active">
-      <img src="images/elektrik-pano-kurulumu1.jpg">
-      <img src="images/elektrik-pano-kurulumu2.jpg">
-      <img src="images/elektrik-pano-kurulumu3.jpg">
-    </div>
-    <div class="card-content">
-      <h3>Elektrik Pano Revizyonu</h3>
-      <p>Ana dağıtım panosu, kompanzasyon sistemleri ve pano yenileme hizmetleri.</p>
-    </div>
+  <div class="slider">
+    <img src="images/elektrik-pano-kurulumu.jpg" class="active">
+    <img src="images/elektrik-pano-kurulumu1.jpg">
+    <img src="images/elektrik-pano-kurulumu2.jpg">
+    <img src="images/elektrik-pano-kurulumu3.jpg">
   </div>
+  <div class="card-content">
+    <h3>Elektrik Pano Revizyonu</h3>
+    <p>Ana dağıtım panosu, kompanzasyon sistemleri ve pano yenileme hizmetleri.</p>
+  </div>
+</div>
+
+</section>
+
+<h2 class="section-title" id="projeler">Gerçek İşlerimiz</h2>
+
+<section class="services">
+
+<div class="card"><img src="elektrik-pano-kurulumu.jpg" alt="Elektrik Pano Revizyonu Kuşadası"></div>
+<div class="card"><img src="elektrik-pano-kurulumu1.jpg" alt="Elektrik Pano Revizyonu Kuşadası"></div>
+<div class="card"><img src="elektrik-pano-kurulumu2.jpg" alt="Elektrik Pano Revizyonu Kuşadası"></div>
+<div class="card"><img src="elektrik-pano-kurulumu3.jpg" alt="Elektrik Pano Revizyonu Kuşadası"></div>
+<div class="card"><img src="pano2.jpg" alt="Kompanzasyon Panosu Kurulumu"></div>
+<div class="card"><img src="pano2.jpg" alt="Kompanzasyon Panosu Kurulumu"></div>
+<div class="card"><img src="pano2.jpg" alt="Kompanzasyon Panosu Kurulumu"></div>
+<div class="card"><img src="pano2.jpg" alt="Kompanzasyon Panosu Kurulumu"></div>
+<div class="card"><img src="pompa.jpg" alt="Pompa Sistem Kurulumu Kuşadası"></div>
+<div class="card"><img src="pompa.jpg" alt="Pompa Sistem Kurulumu Kuşadası"></div>
+<div class="card"><img src="pompa.jpg" alt="Pompa Sistem Kurulumu Kuşadası"></div>
+<div class="card"><img src="pompa.jpg" alt="Pompa Sistem Kurulumu Kuşadası"></div>
+<div class="card"><img src="termal.jpg" alt="Termal Kamera Kaçak Tespiti"></div>
+<div class="card"><img src="termal.jpg" alt="Termal Kamera Kaçak Tespiti"></div>
+<div class="card"><img src="termal.jpg" alt="Termal Kamera Kaçak Tespiti"></div>
+<div class="card"><img src="termal.jpg" alt="Termal Kamera Kaçak Tespiti"></div>
 
 </section>
 
@@ -221,27 +238,3 @@ footer span{color:#ff9800;font-weight:600;}
       width="100%" height="350" allowfullscreen loading="lazy"></iframe>
   </div>
 </section>
-
-<footer>
-  <p>©️ 2026 <span>Meriç Mekanik</span> | Kuşadası Mekanik Tesisat & Elektrik Hizmetleri</p>
-</footer>
-
-<a href="https://wa.me/905437699693?text=Merhaba%20Kuşadası%20mekanik%20ve%20elektrik%20hizmeti%20için%20bilgi%20almak%20istiyorum." class="whatsapp-btn">WhatsApp</a>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  let slides = document.querySelectorAll(".slider img");
-  let index = 0;
-
-  if(slides.length > 0){
-    setInterval(() => {
-      slides[index].classList.remove("active");
-      index = (index + 1) % slides.length;
-      slides[index].classList.add("active");
-    }, 2500);
-  }
-});
-</script>
-
-</body>
-</html>
