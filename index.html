@@ -104,10 +104,41 @@ footer span{color:#ff9800;font-weight:600;}
   color:white;padding:14px 24px;border-radius:40px;
   text-decoration:none;font-weight:600;
 }
+
+  .slider{
+  position:relative;
+  height:230px;
+  overflow:hidden;
+}
+
+.slider img{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition:opacity 0.8s ease-in-out;
+}
+
+.slider img.active{
+  opacity:1;
+}
+  
 </style>
 
 </head>
 
+  <script>
+let slides = document.querySelectorAll(".slider img");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 2500);
+</script>
+  
 <body>
 
 <header>
@@ -158,12 +189,17 @@ footer span{color:#ff9800;font-weight:600;}
   </div>
 
   <div class="card">
-    <img src="Elektrik Pano & Dağıtım.jpg" alt="Kuşadası Elektrik Pano & Dağıtım">
-    <div class="card-content">
-      <h3>Elektrik Pano & Dağıtım</h3>
-      <p>Ana dağıtım panosu, kompanzasyon ve pano revizyon hizmetleri.</p>
-    </div>
+  <div class="slider">
+    <img src="images/elektrik-pano-kurulumu.jpg" class="active">
+    <img src="images/elektrik-pano-kurulumu1.jpg">
+    <img src="images/elektrik-pano-kurulumu2.jpg">
+    <img src="images/elektrik-pano-kurulumu3.jpg">
   </div>
+  <div class="card-content">
+    <h3>Elektrik Pano Revizyonu</h3>
+    <p>Ana dağıtım panosu, kompanzasyon sistemleri ve pano yenileme hizmetleri.</p>
+  </div>
+</div>
 
 </section>
 
