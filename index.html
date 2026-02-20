@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kuşadası Mekanik, Tesisat, Elektrik & Pano Kurulumu | Meriç Mekanik</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Poppins',sans-serif;background:#f5f6f8;color:#1c1c1c;}
@@ -15,13 +25,8 @@ nav a:hover{color:#f57c00;}
 
 .btn-orange{
   background:linear-gradient(45deg,#f57c00,#ff9800);
-  color:white;
-  padding:10px 22px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:600;
-  display:inline-block;
-  transition:all 0.3s ease;
+  color:white;padding:10px 22px;border-radius:8px;
+  text-decoration:none;font-weight:600;
 }
 
 .hero{
@@ -71,12 +76,14 @@ nav a:hover{color:#f57c00;}
 
 .card:hover{transform:translateY(-6px);}
 
+/* TÜM GÖRSELLER SABİT ORAN */
 .card img{
   width:100%;
   height:230px;
   object-fit:cover;
 }
 
+/* PROJELER BİRAZ DAHA YÜKSEK */
 .projects .card img{
   height:250px;
 }
@@ -130,23 +137,92 @@ footer span{color:#ff9800;font-weight:600;}
   border-radius:40px;
   text-decoration:none;
   font-weight:600;
-  display:inline-block;
-  transition:all 0.3s ease;
-}
-
-/* 🔥 BUTON HAREKETİ (GARANTİ ÇALIŞIR) */
-
-.btn-orange:hover,
-.whatsapp-btn:hover{
-  animation: shake 0.4s;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-}
-
-@keyframes shake{
-  0%{ transform: translateX(0) scale(1.08); }
-  25%{ transform: translateX(-4px) scale(1.08); }
-  50%{ transform: translateX(4px) scale(1.08); }
-  75%{ transform: translateX(-4px) scale(1.08); }
-  100%{ transform: translateX(0) scale(1.08); }
 }
 </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Kuşadası Meriç Mekanik</div>
+  <nav>
+    <a href="#">Ana Sayfa</a>
+    <a href="#hizmetler">Hizmetler</a>
+    <a href="#projeler">Projeler</a>
+    <a href="#iletisim">İletişim</a>
+  </nav>
+  <a href="tel:05437699693" class="btn-orange">Hemen Ara</a>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Kuşadası Mekanik Tesisat & Elektrik Hizmetleri</h1>
+    <p>Kuşadası, Davutlar ve Güzelçamlı’da elektrik pano kurulumu, su kaçağı tespiti ve mekanik tesisat çözümleri.</p>
+    <a href="#hizmetler" class="btn-orange">Hizmetlerimiz</a>
+  </div>
+</section>
+
+<h2 class="section-title" id="hizmetler">Kuşadası Hizmetlerimiz</h2>
+
+<section class="services">
+
+  <div class="card">
+    <img src="Mekanik Tesisat.jpg">
+    <div class="card-content">
+      <h3>Mekanik Tesisat</h3>
+      <p>Konut ve ticari alanlarda profesyonel mekanik tesisat kurulumu ve bakım hizmetleri.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Su Kaçağı Tespiti.jpg">
+    <div class="card-content">
+      <h3>Su Kaçağı Tespiti</h3>
+      <p>Kırmadan dökmeden cihazlı su kaçağı tespiti ve onarım hizmeti.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="insaat-tadilat.jpg"alt="Kuşadası İnşaat ve Tadilat">
+    <div class="card-content">
+      <h3>İnşaat & Tadilat</h3>
+      <p>Anahtar teslim tadilat ve yapı çözümleri.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="elektrik-kumanda-kompanzasyon.jpg"alt="Elektrik/pano &Kompanzasyon Kurulumu">
+    <div class="card-content">
+      <h3>Elektrik/Pano & Kompanzasyon Kurulumu</h3>
+      <p>Ana dağıtım panosu, kompanzasyon panosu ve elektrik tesisat hizmetleri.</p>
+    </div>
+  </div>
+
+</section>
+
+<section class="projects">
+
+</section>
+
+<section class="location" id="iletisim">
+<h2>Kuşadası Mekanik & Elektrik Hizmet Bölgelerimiz</h2>
+<p>Kuşadası merkez, Davutlar ve Güzelçamlı’da elektrikçi ve mekanik tesisat hizmeti vermekteyiz.</p>
+
+<div class="map">
+<iframe 
+src="https://maps.google.com/maps?q=Kuşadası,%20Aydın&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%" height="350" loading="lazy"></iframe>
+</div>
+</section>
+
+<footer>
+©️ 2026 <span>Kuşadası Meriç Mekanik</span> | Aydın  
+Tüm Hakları Saklıdır.
+</footer>
+
+<a href="https://wa.me/905437699693" class="whatsapp-btn">
+WhatsApp Destek
+</a>
+
+</body>
+</html>
