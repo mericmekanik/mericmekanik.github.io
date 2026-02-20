@@ -6,20 +6,6 @@
 
 <title>Kuşadası Mekanik Tesisat, Elektrik & Pano Kurulumu | Meriç Mekanik</title>
 
-<meta name="description" content="Kuşadası mekanik tesisat, su kaçağı tespiti, elektrikçi hizmetleri ve elektrik pano kurulumu. Davutlar ve Güzelçamlı dahil hızlı, garantili ve profesyonel çözümler.">
-<meta name="keywords" content="Kuşadası mekanik tesisat, Kuşadası elektrikçi, Kuşadası elektrik pano, Kuşadası su kaçağı, Davutlar elektrikçi, Güzelçamlı tesisat">
-
-<meta name="author" content="Kuşadası Meriç Mekanik">
-<meta name="robots" content="index, follow">
-
-<link rel="canonical" href="https://mericmekanik.com/">
-
-<!-- Open Graph -->
-<meta property="og:title" content="Kuşadası Mekanik & Elektrik Pano Hizmetleri">
-<meta property="og:description" content="Kuşadası merkez, Davutlar ve Güzelçamlı’da mekanik tesisat ve elektrikçi hizmetleri.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://mericmekanik.com/">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -61,79 +47,98 @@ nav a:hover{color:#f57c00;}
   margin-bottom:40px;color:#0d1b2a;
 }
 
+/* SERVICES GRID */
 .services{
-  padding:0 8% 60px 8%;
+  padding:0 8% 80px 8%;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+/* PROJECTS GRID */
+.projects{
+  padding:0 8% 80px 8%;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:30px;
 }
 
 .card{
-  background:white;border-radius:16px;
+  background:white;
+  border-radius:16px;
   overflow:hidden;
   box-shadow:0 15px 35px rgba(0,0,0,0.05);
   transition:.3s;
+  display:flex;
+  flex-direction:column;
+  height:100%;
 }
 
 .card:hover{transform:translateY(-6px);}
 
-.card img{width:100%;height:230px;object-fit:cover;}
-.card-content{padding:25px;}
-.card h3{margin-bottom:10px;color:#0d1b2a;font-size:20px;}
-.card p{font-size:15px;line-height:1.6;}
+/* TÜM GÖRSELLER SABİT ORAN */
+.card img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+}
+
+/* PROJELER BİRAZ DAHA YÜKSEK */
+.projects .card img{
+  height:250px;
+}
+
+.card-content{
+  padding:25px;
+  flex:1;
+}
+
+.card h3{
+  margin-bottom:10px;
+  color:#0d1b2a;
+  font-size:20px;
+}
+
+.card p{
+  font-size:15px;
+  line-height:1.6;
+}
 
 .location{
-  padding:80px 8%;background:white;
+  padding:80px 8%;
+  background:white;
   text-align:center;
 }
 
-.map{border-radius:16px;overflow:hidden;
+.map{
+  border-radius:16px;
+  overflow:hidden;
   box-shadow:0 15px 35px rgba(0,0,0,0.08);
   margin-top:30px;
 }
 
 footer{
-  background:#0d1b2a;color:white;
-  text-align:center;padding:30px 8%;
+  background:#0d1b2a;
+  color:white;
+  text-align:center;
+  padding:30px 8%;
   font-size:14px;
 }
 
 footer span{color:#ff9800;font-weight:600;}
 
 .whatsapp-btn{
-  position:fixed;right:20px;bottom:20px;
+  position:fixed;
+  right:20px;
+  bottom:20px;
   background:linear-gradient(45deg,#25D366,#1ebe5d);
-  color:white;padding:14px 24px;border-radius:40px;
-  text-decoration:none;font-weight:600;
-}
-
-  .projects img{
-  width:100%;
-  height:250px;
-  object-fit:cover;
-  border-radius:12px;
+  color:white;
+  padding:14px 24px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:600;
 }
 </style>
-
-<!-- Local Business Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "LocalBusiness",
- "name": "Kuşadası Meriç Mekanik",
- "image": "https://mericmekanik.com/hero.jpg",
- "telephone": "+905437699693",
- "address": {
-   "@type": "PostalAddress",
-   "addressLocality": "Kuşadası",
-   "addressRegion": "Aydın",
-   "addressCountry": "TR"
- },
- "areaServed": ["Kuşadası", "Davutlar", "Güzelçamlı"],
- "url": "https://mericmekanik.com/"
-}
-</script>
-
 </head>
 
 <body>
@@ -158,67 +163,53 @@ footer span{color:#ff9800;font-weight:600;}
 </section>
 
 <h2 class="section-title" id="hizmetler">Kuşadası Hizmetlerimiz</h2>
-  
-<section class="projects">
-  
-<div class="card">
-<img src="Mekanik Tesisat.jpg" alt="Kuşadası Mekanik Tesisat Hizmeti">
-<div class="card-content">
-<h3>Mekanik Tesisat</h3>
-<p>Konut ve ticari alanlarda profesyonel mekanik tesisat kurulumu ve bakım hizmetleri.</p>
-</div>
-</div>
 
-<div class="card">
-<img src="Su Kaçağı Tespiti.jpg" alt="Kuşadası Su Kaçağı Tespiti">
-<div class="card-content">
-<h3>Su Kaçağı Tespiti</h3>
-<p>Kırmadan dökmeden cihazlı su kaçağı tespiti ve onarım hizmeti.</p>
-</div>
-</div>
+<section class="services">
 
-<div class="card">
-<img src="İnşaat&Tadilat.jpg" alt="Kuşadası İnşaat ve Tadilat">
-<div class="card-content">
-<h3>İnşaat & Tadilat</h3>
-<p>Anahtar teslim tadilat ve yapı çözümleri.</p>
-</div>
-</div>
-  
-  </div>
-  <h2 class="section-title" id="projeler">Gerçek İşlerimiz</h2>
+  <div class="card">
+    <img src="Mekanik Tesisat.jpg">
+    <div class="card-content">
+      <h3>Mekanik Tesisat</h3>
+      <p>Konut ve ticari alanlarda profesyonel mekanik tesisat kurulumu ve bakım hizmetleri.</p>
+    </div>
   </div>
 
-</div>
-<div class="card">
-<img src="elektrik-pano-kurulumu.jpg" alt="Kuşadası Elektrik ve Pano Kurulumu">
-<img src="elektrik-pano-kurulumu1.jpg" alt="Kuşadası Elektrik ve Pano Kurulumu">
-<img src="elektrik-pano-kurulumu2.jpg" alt="Kuşadası Elektrik ve Pano Kurulumu">
-<img src="elektrik-pano-kurulumu3.jpg" alt="Kuşadası Elektrik ve Pano Kurulumu">
-<div class="card-content">
-<h3>Elektrik & Pano Kurulumu</h3>
-<p>Ana dağıtım panosu, kompanzasyon panosu, elektrik arıza ve tesisat hizmetleri.</p>
-</div>
-</div>
+  <div class="card">
+    <img src="Su Kaçağı Tespiti.jpg">
+    <div class="card-content">
+      <h3>Su Kaçağı Tespiti</h3>
+      <p>Kırmadan dökmeden cihazlı su kaçağı tespiti ve onarım hizmeti.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="İnşaat&Tadilat.jpg">
+    <div class="card-content">
+      <h3>İnşaat & Tadilat</h3>
+      <p>Anahtar teslim tadilat ve yapı çözümleri.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="elektrik-pano-kurulumu.jpg">
+    <div class="card-content">
+      <h3>Elektrik & Pano Kurulumu</h3>
+      <p>Ana dağıtım panosu, kompanzasyon panosu ve elektrik tesisat hizmetleri.</p>
+    </div>
+  </div>
 
 </section>
 
-<section class="services projects">
-  
-<div class="card"><img src="pano2.jpg" alt="Kompanzasyon Panosu Kurulumu Kuşadası"></div>
-<div class="card"><img src="pano2.jpg" alt="Kompanzasyon Panosu Kurulumu Kuşadası"></div>
-<div class="card"><img src="pano2.jpg" alt="Kompanzasyon Panosu Kurulumu Kuşadası"></div>
-<div class="card"><img src="pano2.jpg" alt="Kompanzasyon Panosu Kurulumu Kuşadası"></div>
-  
-<div class="card"><img src="pompa.jpg" alt="Kuşadası Pompa Sistem Kurulumu"></div>
-<div class="card"><img src="pompa.jpg" alt="Kuşadası Pompa Sistem Kurulumu"></div>
-<div class="card"><img src="pompa.jpg" alt="Kuşadası Pompa Sistem Kurulumu"></div>
-<div class="card"><img src="pompa.jpg" alt="Kuşadası Pompa Sistem Kurulumu"></div>
+<h2 class="section-title" id="projeler">Gerçek İşlerimiz</h2>
 
-<div class="card"><img src="termal.jpg" alt="Termal Kamera ile Kaçak Tespiti"></div>
-<div class="card"><img src="termal.jpg" alt="Termal Kamera ile Kaçak Tespiti"></div>
-<div class="card"><img src="termal.jpg" alt="Termal Kamera ile Kaçak Tespiti"></div>
-<div class="card"><img src="termal.jpg" alt="Termal Kamera ile Kaçak Tespiti"></div>
+<section class="projects">
+
+  <div class="card"><img src="pano2.jpg"></div>
+  <div class="card"><img src="pompa.jpg"></div>
+  <div class="card"><img src="termal.jpg"></div>
+  <div class="card"><img src="pano2.jpg"></div>
+  <div class="card"><img src="pompa.jpg"></div>
+  <div class="card"><img src="termal.jpg"></div>
 
 </section>
 
@@ -231,7 +222,6 @@ footer span{color:#ff9800;font-weight:600;}
 src="https://maps.google.com/maps?q=Kuşadası,%20Aydın&t=&z=13&ie=UTF8&iwloc=&output=embed"
 width="100%" height="350" loading="lazy"></iframe>
 </div>
-
 </section>
 
 <footer>
